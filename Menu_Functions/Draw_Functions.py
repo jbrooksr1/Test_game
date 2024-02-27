@@ -1,9 +1,14 @@
-import pygame
-
-from Constants import TEXT_SIZE, BUTTON_TEXT_SIZE
+from Constants import *
 pygame.init()
 
 text_font = pygame.font.SysFont('Arial', TEXT_SIZE)
+
+
+def draw_pause_text(window, text, font, colour, x, y):
+    text_object = font.render(text, 1, colour)
+    text_box = text_object.get_rect()
+    text_box.topleft = (x - text_box.width // 2, y - text_box.height // 2)
+    window.blit(text_object, text_box)
 
 
 def draw_text(window, text, font, colour, x, y):

@@ -1,6 +1,3 @@
-import sys
-from Menu_Functions.Draw_Functions import *
-from Constants import *
 from Game_Functions.Game_Run import *
 
 WINDOW = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT), pygame.RESIZABLE)
@@ -57,7 +54,6 @@ def main_menu(window):
                     click = True
 
         if button_1.collidepoint((mouse_x, mouse_y)) and click:
-            # difficulty_screen(window, "option 1")
             game_run(window)
         if button_2.collidepoint((mouse_x, mouse_y)) and click:
             difficulty_screen(window, "option 2")
@@ -72,6 +68,7 @@ def main_menu(window):
 
 
 def start_window(window):
+
     global WINDOW
 
     while True:
